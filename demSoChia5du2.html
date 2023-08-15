@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><h1>Tính có bao nhiêu số chia 5 dư 2 từ A>B</h1>
+<input type="text" id="tu">A<br>
+<input type="text" id="den">B<br>
+<button onclick="tim()">Tim</button>
+<p id="hienthi"></p>
+<script>
+    function tim() {
+        let number1 = +document.getElementById("tu").value;
+        let number2 = +document.getElementById("den").value;
+        let c = "";
+        for (let i = number1; i <= number2; i++) {
+            if (i % 5 === 3) {
+                c += i+" , "
+                document.getElementById("hienthi").innerHTML = "Các so chia 5 du 2 la :  " + c;
+                console.log(c);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
